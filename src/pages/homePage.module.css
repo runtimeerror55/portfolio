@@ -1,0 +1,29 @@
+.page {
+      background-color: #14131a;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      font-family: cursive;
+}
+.banner {
+      height: 100px;
+      width: 100%;
+      background-color: black;
+}
+.profile {
+      width: 120px;
+      border-radius: 50%;
+      transform: translate(100px, 30px);
+}
+
+.main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+}
+
+.menu-item {
+      width: 200px;
+      font-size: 20px;
+      margin: 5px;
+}

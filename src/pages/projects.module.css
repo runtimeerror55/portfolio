@@ -1,0 +1,75 @@
+.projects-section {
+      width: 90%;
+      margin-top: 80px;
+}
+.projects-heading {
+      color: white;
+      font-size: 30px;
+}
+
+.projects {
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.project {
+      background-color: #1c1b23;
+      border-radius: 20px;
+      margin-top: 20px;
+      display: flex;
+      min-height: 120px;
+      padding: 10px;
+      width: 49%;
+      margin-left: 1%;
+}
+
+.project-icon-container {
+      padding: 10px;
+      background-color: teal;
+      width: 120px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+}
+
+.project-information {
+      margin-left: 10px;
+}
+
+.project-name {
+      color: white;
+      font-size: 20px;
+}
+
+.time-spent-image {
+      padding: 5px;
+}
+
+.project-link {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-right: 10px;
+}
+
+.project-link:hover {
+      color: green;
+}
+
+.tech-stack {
+      padding: 5px;
+      width: 50%;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      color: grey;
+}
+
+.tool {
+      width: 50%;
+}
