@@ -207,7 +207,7 @@ const projects = [
       },
 ];
 export const ProjectDetails = () => {
-      const loaderData = { payload: projects[0] };
+      const loaderData = useAsyncValue();
       const { theme } = useContext(themeContext);
 
       return (

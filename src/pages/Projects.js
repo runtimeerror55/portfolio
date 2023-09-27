@@ -229,7 +229,7 @@ const projectsData = [
 ];
 
 export const Projects = () => {
-      const loaderData = { payload: projectsData };
+      const loaderData = useAsyncValue();
       const { theme } = useContext(themeContext);
       console.log(loaderData);
       return (

@@ -9,7 +9,9 @@ app.use(
       })
 );
 mongoose
-      .connect("mongodb://127.0.0.1:27017/portfolio")
+      .connect(
+            "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/?retryWrites=true&w=majority"
+      )
       .then(() => {
             console.log("connected to mongodb");
       })
