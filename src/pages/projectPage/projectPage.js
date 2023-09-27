@@ -1,60 +1,61 @@
+import { Suspense, useContext } from "react";
+import { Await, useLoaderData } from "react-router";
 import styles from "./projectPage.module.css";
-import stylesOne from "../homePage.module.css";
-import baymax from "../../assets/images/baymax.jpeg";
-import profile from "../../assets/images/profile.jpg";
 
+import profile from "../../assets/images/profile.jpg";
+import { ColorRing } from "react-loader-spinner";
+import { colorRingOptions } from "../../utilities/utilities";
+import { ProjectDetails } from "./projectDetails";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { themeContext } from "../../context/theme";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 export const ProjectPage = () => {
+      const { loaderData } = useLoaderData();
+      const { theme, themeChangeHandler } = useContext(themeContext);
       return (
-            <div className={stylesOne["page"]}>
-                  <div className={stylesOne["banner"]}>
-                        <img
-                              src={profile}
-                              alt="baymax"
-                              className={stylesOne["profile"]}
-                        ></img>
+            <div className={styles["page"] + " " + styles["page-" + theme]}>
+                  <div
+                        className={
+                              styles["banner"] + " " + styles["banner-" + theme]
+                        }
+                  >
+                        <div>
+                              <img
+                                    src={profile}
+                                    alt="baymax"
+                                    className={styles["profile"]}
+                              ></img>
+                              <FontAwesomeIcon
+                                    icon={faGithub}
+                              ></FontAwesomeIcon>
+                              <FontAwesomeIcon
+                                    icon={faLinkedin}
+                              ></FontAwesomeIcon>
+                        </div>
+
+                        <FontAwesomeIcon
+                              icon={faLightbulb}
+                              className={styles["bulb"]}
+                              onClick={themeChangeHandler}
+                        />
                   </div>
-                  <main className={stylesOne["main"]}>
-                        <section className={styles["project-section"]}>
-                              <h2 className={styles["project-name"]}>
-                                    Tetris (version 1.0)
-                              </h2>
-                              <p className={styles["introduction"]}>
-                                    Welcome to our web-based Tetris game!
-                                    Immerse yourself in the classic world of
-                                    falling blocks and strategy as you challenge
-                                    your skills and aim for high scores. Get
-                                    ready to experience Tetris like never
-                                    before, right in your web browser
-                              </p>
-                              <h3>Key functionalities:</h3>
-                              <ol>
-                                    <li>move down</li>
-                                    <li>move right</li>
-                                    <li>move left</li>
-                                    <li>generate board nodes matrix</li>
-                                    <li>destroying blocks</li>
-                                    <li>ui renderer</li>
-                                    <li>shifting blocks</li>
-                                    <li>updating player binary matrix</li>
-                                    <li>isPossibletoMove</li>
-                                    <li>update score</li>
-                                    <li>update currentTetromino</li>
-                              </ol>
-                              <h3>Lannguages and tools used:</h3>
-                              <ol>
-                                    <li>html</li>
-                                    <li>javscript</li>
-                                    <li>css</li>
-                                    <li>ejs</li>
-                                    <li>express</li>
-                                    <li>express-session</li>
-                                    <li>passport</li>
-                                    <li>passport-local</li>
-                                    <li>passport-local-mongoose</li>
-                                    <li>mongoose</li>
-                                    <li>express</li>
-                              </ol>
-                        </section>
+                  <main className={styles["main"]}>
+                        <Suspense
+                              fallback={
+                                    <div className={styles["loader"]}>
+                                          <ColorRing
+                                                {...colorRingOptions}
+                                          ></ColorRing>
+                                    </div>
+                              }
+                        >
+                              <Await resolve={loaderData}>
+                                    <ProjectDetails
+                                          theme={theme}
+                                    ></ProjectDetails>
+                              </Await>
+                        </Suspense>
                   </main>
             </div>
       );

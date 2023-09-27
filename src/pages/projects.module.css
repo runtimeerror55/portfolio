@@ -21,6 +21,15 @@
       padding: 10px;
       width: 49%;
       margin-left: 1%;
+      transition: background-color 0.5s linear;
+}
+.project-dark-mode {
+      background-color: #1c1b23;
+      color: white;
+}
+.project-light-mode {
+      background-color: #deecf7;
+      color: black;
 }
 
 .project-icon-container {
@@ -43,6 +52,12 @@
       color: white;
       font-size: 20px;
 }
+.project-name-dark-mode {
+      color: white;
+}
+.project-name-light-mode {
+      color: black;
+}
 
 .time-spent-image {
       padding: 5px;
@@ -60,6 +75,21 @@
       color: green;
 }
 
+.project-link-dark-mode {
+      color: white;
+}
+.project-link-dark-mode:hover {
+      color: green;
+}
+
+.project-link-light-mode {
+      color: black;
+}
+
+.project-link-light-mode:hover {
+      color: white;
+}
+
 .tech-stack {
       padding: 5px;
       width: 50%;
@@ -72,4 +102,10 @@
 
 .tool {
       width: 50%;
+}
+
+@media (max-width: 1000px) {
+      .project {
+            width: 99%;
+      }
 }

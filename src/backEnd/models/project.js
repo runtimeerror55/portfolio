@@ -11,8 +11,15 @@ const projectSchema = mongoose.Schema({
                   type: String,
             },
       ],
-      versions: [],
-      timeSpent: String,
+      versions: [
+            {
+                  type: mongoose.Schema.Types.ObjectId,
+                  ref: "projects",
+            },
+      ],
+      timeSpentLink: String,
+      introduction: String,
+      icon: String,
 });
 
 module.exports.ProjectModel = mongoose.model("projects", projectSchema);

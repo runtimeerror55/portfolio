@@ -4,16 +4,50 @@
       min-height: 100vh;
       flex-direction: column;
       font-family: cursive;
+      transition: background-color 0.5s linear;
+}
+.page-dark-mode {
+      background-color: #14131a;
+}
+.page-light-mode {
+      background-color: white;
 }
 .banner {
       height: 100px;
       width: 100%;
       background-color: black;
+      transition: background-color 0.5s linear;
+}
+.banner-dark-mode {
+      background-color: black;
+}
+.banner-light-mode {
+      background-color: darkcyan;
 }
 .profile {
       width: 120px;
       border-radius: 50%;
       transform: translate(100px, 30px);
+}
+.profile-links {
+      display: flex;
+      justify-content: space-evenly;
+}
+.profile-image {
+      width: 120px;
+      border-radius: 50%;
+}
+
+.bulb {
+      position: absolute;
+      right: 100px;
+      top: 80px;
+      font-size: 40px;
+      color: gray;
+      cursor: pointer;
+}
+.bulb:hover {
+      color: white;
 }
 
 .main {
@@ -22,8 +56,24 @@
       justify-content: center;
 }
 
-.menu-item {
-      width: 200px;
-      font-size: 20px;
-      margin: 5px;
+.projects-section {
+      width: 90%;
+      margin-top: 80px;
+}
+.projects-heading {
+      color: white;
+      font-size: 30px;
+      text-align: center;
+}
+.projects-heading-light-mode {
+      color: white;
+}
+.projects-heading-light-mode {
+      color: black;
+}
+.loader {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 }

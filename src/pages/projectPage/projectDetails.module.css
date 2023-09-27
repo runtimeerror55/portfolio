@@ -1,0 +1,36 @@
+.project-section {
+      width: 80%;
+      margin-top: 80px;
+}
+
+.project-name {
+      color: white;
+      font-size: 30px;
+      text-align: center;
+}
+.project-name-light-mode {
+      color: black;
+}
+.heading {
+      color: white;
+}
+.heading-light-mode {
+      color: black;
+}
+
+.introduction {
+      color: white;
+      padding: 20px;
+}
+
+.content {
+      color: rgba(255, 255, 255, 0.8);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+      padding-top: 20px;
+      padding-bottom: 20px;
+}
+
+.content-light-mode {
+      color: rgba(0, 0, 0, 0.8);
+      border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}

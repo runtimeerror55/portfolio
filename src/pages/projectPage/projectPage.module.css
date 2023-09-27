@@ -1,15 +1,50 @@
-.project-section {
-      width: 90%;
-      margin-top: 80px;
+.page {
+      background-color: #14131a;
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+      font-family: cursive;
+      transition: background-color 0.5s linear;
+}
+.page-light-mode {
+      background-color: white;
+}
+.banner {
+      height: 100px;
+      width: 100%;
+      background-color: black;
+      transition: background-color 0.5s linear;
+}
+.banner-light-mode {
+      background-color: darkcyan;
+}
+.profile {
+      width: 120px;
+      border-radius: 50%;
+      transform: translate(100px, 30px);
+}
+
+.bulb {
+      position: absolute;
+      right: 100px;
+      top: 80px;
+      font-size: 40px;
+      color: gray;
+      cursor: pointer;
+}
+.bulb:hover {
       color: white;
 }
 
-.project-name {
-      color: white;
-      font-size: 30px;
+.main {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
 }
 
-.introduction {
-      color: white;
-      padding: 20px;
+.loader {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
 }
