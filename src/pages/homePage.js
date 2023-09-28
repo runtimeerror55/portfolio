@@ -42,9 +42,7 @@ export const HomePage = () => {
                                           styles["projects-heading-" + theme]
                                     }
                               >
-                                    {window.innerWidth +
-                                          " " +
-                                          window.innerHeight}
+                                    Projects
                               </h2>
 
                               <Suspense

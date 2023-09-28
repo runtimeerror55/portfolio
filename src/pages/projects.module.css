@@ -41,7 +41,7 @@
       align-items: center;
       justify-content: center;
       color: white;
-      font-size: 20px;
+      font-size: 1.5em;
 }
 
 .project-information {
@@ -50,7 +50,7 @@
 
 .project-name {
       color: white;
-      font-size: 20px;
+      font-size: 1.2em;
 }
 .project-name-dark-mode {
       color: white;
@@ -98,6 +98,7 @@
       display: flex;
       flex-wrap: wrap;
       color: grey;
+      font-size: 1em;
 }
 
 .tool {
@@ -107,5 +108,14 @@
 @media (max-width: 1000px) {
       .project {
             width: 99%;
+      }
+}
+
+@media (max-width: 700px) {
+      .project-name {
+            font-size: 1em;
+      }
+      .tech-stack {
+            font-size: 0.8em;
       }
 }

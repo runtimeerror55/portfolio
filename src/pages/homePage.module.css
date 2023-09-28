@@ -26,6 +26,7 @@
 }
 .profile {
       width: 120px;
+      height: 120px;
       border-radius: 50%;
       transform: translate(5vw, 30px);
 }
@@ -34,7 +35,8 @@
       justify-content: space-evenly;
 }
 .profile-image {
-      width: 120px;
+      width: 12vw;
+      height: 12vw;
       border-radius: 50%;
 }
 
@@ -62,7 +64,7 @@
 }
 .projects-heading {
       color: white;
-      font-size: 30px;
+      font-size: 2em;
       text-align: center;
 }
 .projects-heading-light-mode {
@@ -76,4 +78,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+}
+
+@media (max-width: 800px) {
+      .projects-heading {
+            font-size: 1.7em;
+      }
+      .profile {
+            width: 100px;
+            height: 100px;
+            transform: translate(5vw, 40px);
+      }
 }
