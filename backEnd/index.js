@@ -3,11 +3,7 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { ProjectModel } = require("./models/project");
-app.use(
-      cors({
-            origin: "*",
-      })
-);
+
 mongoose
       .connect(
             "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/?retryWrites=true&w=majority"
