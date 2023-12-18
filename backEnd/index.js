@@ -25,11 +25,8 @@ app.listen(8080, () => {
 app.get("/projects", async (request, response) => {
       try {
             const projects = await ProjectModel.find({});
-            setTimeout(() => {
-                  response
-                        .status(200)
-                        .json({ status: "success", payload: projects });
-            }, 1000);
+
+            response.status(200).json({ status: "success", payload: projects });
       } catch (error) {
             response
                   .status(500)
@@ -42,11 +39,8 @@ app.get("/projects/:projectId", async (request, response) => {
             const project = await ProjectModel.findById(
                   request.params.projectId
             );
-            setTimeout(() => {
-                  response
-                        .status(200)
-                        .json({ status: "success", payload: project });
-            }, 1000);
+
+            response.status(200).json({ status: "success", payload: project });
       } catch (error) {
             response
                   .status(500)
