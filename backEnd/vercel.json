@@ -16,7 +16,8 @@
                         {
                               "key": "Access-Control-Allow-Origin",
                               "value": [
-                                    "https://portfolio-alpha-sandy-37.vercel.app,http://localhost:3000"
+                                    "https://portfolio-alpha-sandy-37.vercel.app",
+                                    "http://localhost:3000"
                               ]
                         },
                         {
