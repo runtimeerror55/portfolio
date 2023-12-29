@@ -3,6 +3,10 @@ const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
 const { ProjectModel } = require("./models/project");
+const localDbUrl =
+      " mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.0";
+const hostedDbUrl =
+      "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose
       .connect(
