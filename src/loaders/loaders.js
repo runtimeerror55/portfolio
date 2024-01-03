@@ -1,5 +1,5 @@
 import { defer } from "react-router";
-const hostedBackendUrl = "https://portfolio-backend-red.vercel.app/projects";
+const hostedBackendUrl = "https://portfolio-backend-red.vercel.app";
 const localBackEndUrl = "http://localhost:8080";
 
 export const getProjects = async () => {
