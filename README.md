@@ -9,6 +9,7 @@ portfolio information to be displayed
 5. max-width should be setted to 1550px
 6. seeding updated content to hosted db
 7. delete other profile images
+8. how does map check if an element in an array is empty and it does not map to the return value if it is empty
 
 # Getting Started with Create React App
 

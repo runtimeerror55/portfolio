@@ -29,7 +29,11 @@ app.get("/projects", async (request, response) => {
       try {
             const projects = await ProjectModel.find({});
 
-            response.status(200).json({ status: "success", payload: projects });
+            setTimeout(() => {
+                  response
+                        .status(200)
+                        .json({ status: "success", payload: projects });
+            }, 1000);
       } catch (error) {
             response
                   .status(500)

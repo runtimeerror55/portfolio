@@ -12,6 +12,7 @@ import {
       faGreaterThan,
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
+import { Facebook } from "react-content-loader";
 
 const icons = {
       faGamepad,

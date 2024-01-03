@@ -11,7 +11,7 @@ import { faLightbulb, faBolt } from "@fortawesome/free-solid-svg-icons";
 import { themeContext } from "../context/theme";
 import { Blogs } from "./blogs";
 import { About } from "./about";
-
+import { ProjectsLoader } from "../components/loaders/projectsLoader";
 export const HomePage = () => {
       const { loaderData } = useLoaderData();
       const { theme, themeChangeHandler } = useContext(themeContext);
@@ -50,11 +50,11 @@ export const HomePage = () => {
 
                               <Suspense
                                     fallback={
-                                          <div className={styles["loader"]}>
-                                                <ColorRing
-                                                      {...colorRingOptions}
-                                                ></ColorRing>
-                                          </div>
+                                          <ProjectsLoader
+                                                theme={theme}
+                                                color="teal"
+                                                numberOfLoaders={6}
+                                          ></ProjectsLoader>
                                     }
                               >
                                     <Await resolve={loaderData}>
@@ -75,11 +75,11 @@ export const HomePage = () => {
 
                               <Suspense
                                     fallback={
-                                          <div className={styles["loader"]}>
-                                                <ColorRing
-                                                      {...colorRingOptions}
-                                                ></ColorRing>
-                                          </div>
+                                          <ProjectsLoader
+                                                theme={theme}
+                                                color="crimson"
+                                                numberOfLoaders={4}
+                                          ></ProjectsLoader>
                                     }
                               >
                                     <Await resolve={loaderData}>
