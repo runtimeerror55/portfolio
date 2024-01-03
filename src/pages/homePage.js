@@ -7,8 +7,11 @@ import { Projects } from "./Projects";
 import { ColorRing } from "react-loader-spinner";
 import { colorRingOptions } from "../utilities/utilities";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb, faBolt } from "@fortawesome/free-solid-svg-icons";
 import { themeContext } from "../context/theme";
+import { Blogs } from "./blogs";
+import { About } from "./about";
+
 export const HomePage = () => {
       const { loaderData } = useLoaderData();
       const { theme, themeChangeHandler } = useContext(themeContext);
@@ -59,6 +62,43 @@ export const HomePage = () => {
                                     </Await>
                               </Suspense>
                         </section>
+                        <section className={styles["blogs-section"]}>
+                              <h2
+                                    className={
+                                          styles["blogs-heading"] +
+                                          " " +
+                                          styles["blogs-heading-" + theme]
+                                    }
+                              >
+                                    Blogs
+                              </h2>
+
+                              <Suspense
+                                    fallback={
+                                          <div className={styles["loader"]}>
+                                                <ColorRing
+                                                      {...colorRingOptions}
+                                                ></ColorRing>
+                                          </div>
+                                    }
+                              >
+                                    <Await resolve={loaderData}>
+                                          <Blogs></Blogs>
+                                    </Await>
+                              </Suspense>
+                        </section>
+                        <section className={styles["about-section"]}>
+                              <h2
+                                    className={
+                                          styles["about-heading"] +
+                                          " " +
+                                          styles["about-heading-" + theme]
+                                    }
+                              >
+                                    About
+                              </h2>
+                              <About theme={theme}></About>
+                        </section>
                   </main>
             </div>
       );
@@ -67,3 +107,5 @@ export const HomePage = () => {
 // project backgroundcolor: #deecf7
 // banner backgroundcolor: darkcyan
 // color: black
+// blog icon color : crimson
+// banner background-color: is same as project background which is light blue in color

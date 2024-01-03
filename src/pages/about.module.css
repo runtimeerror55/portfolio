@@ -1,0 +1,65 @@
+.container-one {
+      display: flex;
+      background-color: #1c1b23;
+}
+.container-one-light-mode {
+      background-color: #deecf7;
+}
+.profile {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+}
+
+.social-link {
+      font-family: inherit;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      width: 150px;
+      padding: 5px;
+      border-radius: 15px;
+      background-color: darkseagreen;
+      color: white;
+}
+
+.item {
+      margin: 20px;
+}
+.item-one {
+      min-width: 200px;
+      background-color: seagreen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-right: 30px;
+      padding: 30px;
+}
+
+.about-introduction {
+      color: white;
+      margin-bottom: 10px;
+}
+.about-introduction-light-mode {
+      color: black;
+}
+.why-you-should-hire-me-li {
+      margin-top: 10px;
+      color: gray;
+}
+
+@media (max-width: 800px) {
+      .container-one {
+            flex-direction: column;
+      }
+      .why-you-should-hire-me-li {
+            font-size: 0.8em;
+      }
+      .item-one {
+            margin-right: 20px;
+      }
+      .about-introduction {
+            font-size: 1em;
+      }
+}

@@ -1,3 +1,15 @@
+# to do
+
+portfolio information to be displayed
+
+1. projects
+2. blogs
+3. about
+4. social media
+5. max-width should be setted to 1550px
+6. seeding updated content to hosted db
+7. delete other profile images
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -15,14 +15,14 @@
 .banner {
       height: 100px;
       width: 100%;
-      background-color: black;
+      background-color: #1c1b23;
       transition: background-color 0.5s linear;
 }
 .banner-dark-mode {
-      background-color: black;
+      background-color: #1c1b23;
 }
 .banner-light-mode {
-      background-color: darkcyan;
+      background-color: #deecf7;
 }
 .profile {
       width: 120px;
@@ -56,21 +56,39 @@
       flex-grow: 1;
       display: flex;
       justify-content: center;
+      flex-direction: column;
+      align-items: center;
 }
 
-.projects-section {
+.projects-section,
+.blogs-section,
+.about-section {
       width: 90%;
       margin-top: 80px;
 }
-.projects-heading {
+/* .blogs-section {
+      margin-bottom: 50px;
+} */
+.about-section {
+      margin-bottom: 50px;
+      padding: 10px;
+}
+
+.projects-heading,
+.blogs-heading,
+.about-heading {
       color: white;
       font-size: 2em;
       text-align: center;
 }
-.projects-heading-light-mode {
-      color: white;
+
+.about-heading {
+      margin-bottom: 30px;
 }
-.projects-heading-light-mode {
+
+.projects-heading-light-mode,
+.blogs-heading-light-mode,
+.about-heading-light-mode {
       color: black;
 }
 .loader {

@@ -1,0 +1,132 @@
+.blogs-section {
+      width: 90%;
+      margin-top: 80px;
+}
+.blogs-heading {
+      color: white;
+      font-size: 30px;
+}
+
+.blogs {
+      display: flex;
+      flex-wrap: wrap;
+}
+
+.blog {
+      background-color: #1c1b23;
+      border-radius: 20px;
+      margin-top: 20px;
+      display: flex;
+      height: 140px;
+      padding: 10px;
+      width: 49%;
+      margin-left: 1%;
+      transition: background-color 0.5s linear;
+}
+.blog-dark-mode {
+      background-color: #1c1b23;
+      color: white;
+}
+.blog-light-mode {
+      background-color: #deecf7;
+      color: black;
+}
+
+.blog-icon-container {
+      padding: 10px;
+      background-color: crimson;
+      min-width: 120px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5em;
+      min-height: 120px;
+}
+
+.blog-information {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+}
+
+.blog-name {
+      color: white;
+      font-size: 1.2em;
+}
+.blog-introduction {
+      color: gray;
+      overflow: hidden;
+      margin: 10px;
+      line-height: 1.6;
+}
+.blog-name-dark-mode {
+      color: white;
+}
+.blog-name-light-mode {
+      color: black;
+}
+
+.time-spent-image {
+      padding: 5px;
+}
+
+.blog-link {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      color: white;
+      margin-right: 10px;
+}
+
+.blog-link:hover {
+      color: green;
+}
+
+.blog-link-dark-mode {
+      color: white;
+}
+.blog-link-dark-mode:hover {
+      color: green;
+}
+
+.blog-link-light-mode {
+      color: black;
+}
+
+.blog-link-light-mode:hover {
+      color: white;
+}
+
+.tech-stack {
+      padding: 5px;
+      width: 50%;
+      border-bottom-right-radius: 20px;
+      border-top-right-radius: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      color: grey;
+      font-size: 1em;
+}
+
+.tool {
+      width: 50%;
+}
+
+@media (max-width: 1000px) {
+      .blog {
+            width: 99%;
+      }
+}
+
+@media (max-width: 800px) {
+      .blog-name {
+            font-size: 1em;
+      }
+
+      .tech-stack,
+      .blog-introduction {
+            font-size: 0.8em;
+      }
+}

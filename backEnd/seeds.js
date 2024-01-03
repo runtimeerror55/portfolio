@@ -1,10 +1,14 @@
 const mongoose = require("mongoose");
 const { ProjectModel } = require("./models/project");
+const { BlogModel } = require("./models/blog");
 const { faGamepad } = require("@fortawesome/free-solid-svg-icons");
+const localDbUrl =
+      "mongodb://127.0.0.1:27017/portfolio?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.0";
+const hostedDbUrl =
+      "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/?retryWrites=true&w=majority";
+
 mongoose
-      .connect(
-            "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/?retryWrites=true&w=majority"
-      )
+      .connect(hostedDbUrl)
       .then(() => {
             console.log("connected to mongodb");
       })
@@ -217,10 +221,25 @@ const projects = [
             icon: "faVideo",
       },
 ];
+const blogs = [
+      { title: "javascript arrays" },
+      { title: "how js works behind the scenes" },
+      { title: "javascript objects" },
+      { title: "javascript functions" },
+];
 const seeds = () => {
       projects.forEach(async (project) => {
             const newProject = new ProjectModel(project);
             await newProject.save();
       });
 };
-seeds();
+
+const blogSeeds = () => {
+      blogs.forEach(async (blog) => {
+            const newBlog = new BlogModel(blog);
+            await newBlog.save();
+      });
+};
+
+// seeds();
+blogSeeds();

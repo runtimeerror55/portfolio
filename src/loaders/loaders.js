@@ -4,9 +4,18 @@ const localBackEndUrl = "http://localhost:8080";
 
 export const getProjects = async () => {
       try {
-            const response = await fetch(
-                  "https://portfolio-backend-red.vercel.app/projects"
-            );
+            const response = await fetch(`${hostedBackendUrl}/projects`);
+            console.log(response);
+            const data = response.json();
+            return data;
+      } catch (error) {
+            return { status: "error", message: error.message };
+      }
+};
+
+export const getBlogs = async () => {
+      try {
+            const response = await fetch(`${hostedBackendUrl}/blogs`);
             console.log(response);
             const data = response.json();
             return data;
@@ -18,7 +27,7 @@ export const getProjects = async () => {
 export const getProject = async (request, params) => {
       try {
             const response = await fetch(
-                  `https://portfolio-backend-red.vercel.app/projects/${params.id}`
+                  `${hostedBackendUrl}/projects/${params.id}`
             );
 
             const data = await response.json();
@@ -29,7 +38,7 @@ export const getProject = async (request, params) => {
 };
 export const homePageLoader = () => {
       return defer({
-            loaderData: getProjects(),
+            loaderData: Promise.all([getProjects(), getBlogs()]),
       });
 };
 
