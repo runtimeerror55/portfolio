@@ -85,6 +85,7 @@ export const Blogs = () => {
                                                 " " +
                                                 styles["blog-link-" + theme]
                                           }
+                                          aria-label="blog link"
                                     >
                                           <FontAwesomeIcon
                                                 icon={faGreaterThan}

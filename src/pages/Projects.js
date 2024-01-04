@@ -306,6 +306,7 @@ export const Projects = () => {
                                                 " " +
                                                 styles["project-link-" + theme]
                                           }
+                                          aria-label="project link"
                                     >
                                           <FontAwesomeIcon
                                                 icon={faGreaterThan}
