@@ -43,4 +43,10 @@
       .project-section {
             width: 90%;
       }
+      .heading {
+            font-size: 1em;
+      }
+      .content {
+            font-size: 0.9em;
+      }
 }
