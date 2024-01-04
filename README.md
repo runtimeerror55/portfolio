@@ -10,6 +10,7 @@ portfolio information to be displayed
 6. seeding updated content to hosted db
 7. delete other profile images
 8. how does map check if an element in an array is empty and it does not map to the return value if it is empty
+9. min hieght should be changed to 140 on project class
 
 # Getting Started with Create React App
 

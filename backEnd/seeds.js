@@ -17,7 +17,7 @@ mongoose
       });
 const projects = [
       {
-            title: "Tetris (version 2.0)",
+            title: "Tetris (2.0)",
             keyFunctionalities: [
                   "simple,clean ,elegant experience",
                   "move current tetromino down ,right,left",
@@ -60,7 +60,7 @@ const projects = [
             icon: "faGamepad",
       },
       {
-            title: "Tetris (version 1.0)",
+            title: "Tetris (1.0)",
             keyFunctionalities: [
                   "move down",
                   "move right",
@@ -99,7 +99,7 @@ const projects = [
             icon: "faGamepad",
       },
       {
-            title: "Touch typing (version 2.0)",
+            title: "Touch typing (2.0)",
             keyFunctionalities: [
                   "typing test",
                   "reloading new paragraph any time (during the test, before the test , after the test)",
@@ -138,7 +138,7 @@ const projects = [
             icon: "faKeyboard",
       },
       {
-            title: "Touch typing (version 1.0)",
+            title: "Touch typing (1.0)",
             keyFunctionalities: [],
             toolAndLanguages: [],
             versions: [],
@@ -227,7 +227,8 @@ const blogs = [
       { title: "javascript objects" },
       { title: "javascript functions" },
 ];
-const seeds = () => {
+const seeds = async () => {
+      await ProjectModel.deleteMany({});
       projects.forEach(async (project) => {
             const newProject = new ProjectModel(project);
             await newProject.save();
@@ -241,5 +242,5 @@ const blogSeeds = () => {
       });
 };
 
-// seeds();
-blogSeeds();
+seeds();
+// blogSeeds();

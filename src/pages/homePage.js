@@ -25,7 +25,7 @@ export const HomePage = () => {
                         <div>
                               <img
                                     src={profile}
-                                    alt="baymax"
+                                    alt="user picture"
                                     className={styles["profile"]}
                               ></img>
                         </div>
