@@ -99,8 +99,10 @@
 }
 
 @media (max-width: 800px) {
-      .projects-heading {
-            font-size: 1.7em;
+      .projects-heading,
+      .blogs-heading,
+      .about-heading {
+            font-size: 1.6em;
       }
       .profile {
             width: 100px;

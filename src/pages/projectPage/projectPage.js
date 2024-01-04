@@ -26,12 +26,6 @@ export const ProjectPage = () => {
                                     alt="baymax"
                                     className={styles["profile"]}
                               ></img>
-                              <FontAwesomeIcon
-                                    icon={faGithub}
-                              ></FontAwesomeIcon>
-                              <FontAwesomeIcon
-                                    icon={faLinkedin}
-                              ></FontAwesomeIcon>
                         </div>
 
                         <FontAwesomeIcon

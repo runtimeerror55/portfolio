@@ -26,11 +26,21 @@
 .content {
       color: rgba(255, 255, 255, 0.8);
       border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-      padding-top: 20px;
-      padding-bottom: 20px;
+      padding: 20px;
+      margin-bottom: 10px;
 }
 
 .content-light-mode {
       color: rgba(0, 0, 0, 0.8);
       border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 800px) {
+      .project-name {
+            font-size: 25px;
+            margin-bottom: 10px;
+      }
+      .project-section {
+            width: 90%;
+      }
 }
