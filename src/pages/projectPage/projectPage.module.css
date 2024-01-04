@@ -12,11 +12,11 @@
 .banner {
       height: 100px;
       width: 100%;
-      background-color: black;
+      background-color: #1c1b23;
       transition: background-color 0.5s linear;
 }
 .banner-light-mode {
-      background-color: darkcyan;
+      background-color: #deecf7;
 }
 .profile {
       width: 120px;
