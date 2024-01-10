@@ -38,6 +38,7 @@ export const ImageOverlay = ({ index, setShowImageOverlay, loaderData }) => {
                                                 });
                                           }
                                     }}
+                                    className={styles["image-control"]}
                               ></FontAwesomeIcon>
                               <FontAwesomeIcon
                                     icon={faArrowRight}
@@ -55,6 +56,7 @@ export const ImageOverlay = ({ index, setShowImageOverlay, loaderData }) => {
                                                 });
                                           }
                                     }}
+                                    className={styles["image-control"]}
                               ></FontAwesomeIcon>
                         </div>
                   </section>

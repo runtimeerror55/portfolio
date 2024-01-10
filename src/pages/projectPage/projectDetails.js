@@ -113,7 +113,7 @@ export const ProjectDetails = () => {
                                           " " +
                                           styles["content-" + theme] +
                                           " " +
-                                          styles["projects-continer"]
+                                          styles["projects-container"]
                                     }
                               >
                                     <div
@@ -155,11 +155,7 @@ export const ProjectDetails = () => {
                                                 }
                                           )}
                                     </div>
-                                    <div
-                                          className={
-                                                styles["images-next-button"]
-                                          }
-                                    >
+                                    <div className={styles["images-controls"]}>
                                           <FontAwesomeIcon
                                                 icon={faArrowLeft}
                                                 onClick={(event) => {
@@ -168,11 +164,14 @@ export const ProjectDetails = () => {
                                                       imagesRef.current.scrollBy(
                                                             {
                                                                   top: 0,
-                                                                  left: -400,
+                                                                  left: -410,
                                                                   behavior: "smooth",
                                                             }
                                                       );
                                                 }}
+                                                className={
+                                                      styles["image-control"]
+                                                }
                                           ></FontAwesomeIcon>
                                           <FontAwesomeIcon
                                                 onClick={(event) => {
@@ -181,12 +180,15 @@ export const ProjectDetails = () => {
                                                       imagesRef.current.scrollBy(
                                                             {
                                                                   top: 0,
-                                                                  left: 400,
+                                                                  left: 410,
                                                                   behavior: "smooth",
                                                             }
                                                       );
                                                 }}
                                                 icon={faArrowRight}
+                                                className={
+                                                      styles["image-control"]
+                                                }
                                           ></FontAwesomeIcon>
                                     </div>
                               </div>

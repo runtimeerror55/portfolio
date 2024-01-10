@@ -30,7 +30,9 @@
       background-color: red;
       cursor: pointer;
 }
-
+.close-button:hover {
+      transform: scale(0.9);
+}
 .overlay-image {
       width: 60vw;
 }
@@ -41,4 +43,17 @@
       gap: 30px;
       margin-top: 15px;
       color: white;
+}
+
+.image-control {
+      cursor: pointer;
+}
+.image-control:hover {
+      transform: scale(0.9);
+}
+
+@media (max-width: 800px) {
+      .overlay-image {
+            width: 95vw;
+      }
 }
