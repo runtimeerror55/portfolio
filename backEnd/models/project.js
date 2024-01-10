@@ -20,6 +20,7 @@ const projectSchema = mongoose.Schema({
       timeSpentLink: String,
       introduction: String,
       icon: String,
+      images: [String],
 });
 
 module.exports.ProjectModel = mongoose.model("projects", projectSchema);

@@ -15,6 +15,7 @@ import { ProjectsLoader } from "../components/loaders/projectsLoader";
 export const HomePage = () => {
       const { loaderData } = useLoaderData();
       const { theme, themeChangeHandler } = useContext(themeContext);
+
       return (
             <div className={styles["page"] + " " + styles["page-" + theme]}>
                   <div
@@ -25,8 +26,8 @@ export const HomePage = () => {
                         <div>
                               <img
                                     src={profile}
-                                    alt="user picture"
                                     className={styles["profile"]}
+                                    alt="user"
                               ></img>
                         </div>
 

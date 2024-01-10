@@ -5,7 +5,7 @@ const { faGamepad } = require("@fortawesome/free-solid-svg-icons");
 const localDbUrl =
       "mongodb://127.0.0.1:27017/portfolio?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.0";
 const hostedDbUrl =
-      "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/?retryWrites=true&w=majority";
+      "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/portfolio?retryWrites=true&w=majority";
 
 mongoose
       .connect(hostedDbUrl)
@@ -58,6 +58,7 @@ const projects = [
            ready to experience Tetris like never
            before, right in your web browser`,
             icon: "faGamepad",
+            images: [],
       },
       {
             title: "Tetris (1.0)",
@@ -97,6 +98,7 @@ const projects = [
             ready to experience Tetris like never
             before, right in your web browser`,
             icon: "faGamepad",
+            images: [],
       },
       {
             title: "Touch typing (2.0)",
@@ -136,6 +138,7 @@ const projects = [
             introduction:
                   "A web based touch typing. Experience simple,elegant,fast, clean touch typing and improve your typing skills",
             icon: "faKeyboard",
+            images: [],
       },
       {
             title: "Touch typing (1.0)",
@@ -145,6 +148,7 @@ const projects = [
             timeSpentLink:
                   "https://wakatime.com/badge/user/4508671f-c39e-4efe-b93e-586266f777da/project/b44acfdd-6382-4cfb-a219-5510400f2056.svg",
             icon: "faKeyboard",
+            images: [],
       },
       {
             title: "Ecommerce",
@@ -183,6 +187,15 @@ const projects = [
             introduction:
                   "A web based electronics shopping app. Experience shopping like never before. Shop for your favourite mobiles,laptops etc",
             icon: "faCartShopping",
+            images: [
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826201/ecommerce/one_op1q9q.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826204/ecommerce/two_zc2c0r.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826208/ecommerce/three_sc0usr.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826215/ecommerce/four_rztsw9.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826222/ecommerce/five_lygyci.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826232/ecommerce/six_qkljad.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826239/ecommerce/seven_xndyzq.png",
+            ],
       },
       {
             title: "Video library",
@@ -219,6 +232,16 @@ const projects = [
             introduction:
                   "A web based tech reviews app. Find all the tech related reviews all in one place.",
             icon: "faVideo",
+            images: [
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827346/video-library/one_di3c4g.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827353/video-library/two_ai2amb.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827358/video-library/three_kn5tww.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827363/video-library/four_kw63qo.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827367/video-library/five_k4ymbf.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827375/video-library/six_i5j3ne.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827381/video-library/seven_fthsa5.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827387/video-library/eight_hs4q9q.png",
+            ],
       },
 ];
 const blogs = [

@@ -12,6 +12,33 @@
 .project-name-light-mode {
       color: black;
 }
+
+.project-links {
+      display: flex;
+      justify-content: end;
+}
+
+.live-button,
+.github-button {
+      background-color: #1c1b23;
+      border-radius: 15px;
+      color: #fff;
+      display: flex;
+      font-family: inherit;
+      justify-content: space-around;
+      margin: 10px;
+      padding: 3px;
+      width: 100px;
+      border: 2px solid white;
+}
+
+.live-button-light-mode,
+.github-button-light-mode {
+      background-color: #deecf7;
+      border: 2px solid black;
+      color: black;
+}
+
 .heading {
       color: white;
 }
@@ -36,6 +63,27 @@
       border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
+.projects-conatiner {
+      flex-direction: column;
+      display: flex;
+}
+.project-images {
+      display: flex;
+      overflow-x: hidden;
+}
+.project-image {
+      width: 400px;
+      margin-right: 20px;
+}
+
+.images-next-button {
+      margin-top: 20px;
+      justify-content: center;
+      display: flex;
+      gap: 50px;
+      font-size: 32px;
+      cursor: pointer;
+}
 @media (max-width: 800px) {
       .project-name {
             font-size: 25px;
@@ -45,6 +93,12 @@
       }
       .heading {
             font-size: 1em;
+      }
+      .live-button,
+      .github-button {
+            width: 80px;
+            font-size: 13px;
+            margin: 4px;
       }
       .content {
             font-size: 0.9em;

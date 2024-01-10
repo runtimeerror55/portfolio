@@ -1,0 +1,44 @@
+.image-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: opacity-animation 0.5s linear;
+      flex-direction: column;
+}
+
+@keyframes opacity-animation {
+      from {
+            opacity: 0;
+      }
+      to {
+            opacity: 1;
+      }
+}
+
+.close-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 3px;
+      color: white;
+      background-color: red;
+      cursor: pointer;
+}
+
+.overlay-image {
+      width: 60vw;
+}
+
+.image-controls {
+      font-size: 32px;
+      display: flex;
+      gap: 30px;
+      margin-top: 15px;
+      color: white;
+}

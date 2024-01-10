@@ -11,6 +11,7 @@ portfolio information to be displayed
 7. delete other profile images
 8. how does map check if an element in an array is empty and it does not map to the return value if it is empty
 9. min hieght should be changed to 140 on project class
+10. max width of section should be around 1500px
 
 # Getting Started with Create React App
 
