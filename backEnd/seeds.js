@@ -138,7 +138,15 @@ const projects = [
             introduction:
                   "A web based touch typing. Experience simple,elegant,fast, clean touch typing and improve your typing skills",
             icon: "faKeyboard",
-            images: [],
+            images: [
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877513/touch-typing-2.0/one_pejfyj.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877514/touch-typing-2.0/two_qjjfrg.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704878047/touch-typing-2.0/three_qdgqtw.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877518/touch-typing-2.0/four_yozzis.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877519/touch-typing-2.0/five_r0byvd.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877521/touch-typing-2.0/six_ecpjjy.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877523/touch-typing-2.0/seven_wxhjyl.png",
+            ],
       },
       {
             title: "Touch typing (1.0)",

@@ -87,6 +87,10 @@
 }
 .project-image {
       width: 400px;
+      cursor: pointer;
+}
+.project-image:hover {
+      transform: scale(0.99);
 }
 
 .images-controls {
