@@ -16,7 +16,7 @@ export const ImageOverlay = ({ index, setShowImageOverlay, loaderData }) => {
                         >
                               close
                         </button>
-                        <FontAwesomeIcon icon={faArrowLeft}></FontAwesomeIcon>
+
                         <img
                               src={loaderData.payload.images[currentIndex]}
                               alt="project"
