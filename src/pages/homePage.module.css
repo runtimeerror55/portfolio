@@ -104,9 +104,15 @@
       .about-heading {
             font-size: 1.6em;
       }
+
       .profile {
-            width: 100px;
-            height: 100px;
-            transform: translate(5vw, 40px);
+            width: 85px;
+            height: 85px;
+            transform: translate(5vw, 57px);
+      }
+
+      .bulb {
+            top: 85px;
+            font-size: 30px;
       }
 }
