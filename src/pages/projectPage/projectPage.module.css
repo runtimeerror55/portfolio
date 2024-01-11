@@ -56,8 +56,13 @@
 
 @media (max-width: 800px) {
       .profile {
-            width: 80px;
-            height: 80px;
-            transform: translate(5vw, 60px);
+            width: 85px;
+            height: 85px;
+            transform: translate(5vw, 57px);
+      }
+
+      .bulb {
+            top: 85px;
+            font-size: 30px;
       }
 }

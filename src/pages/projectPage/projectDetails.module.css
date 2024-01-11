@@ -121,11 +121,11 @@
       }
       .live-button,
       .github-button {
-            width: 100px;
+            width: 90px;
             font-size: 11px;
             margin: 4px;
       }
       .content {
-            font-size: 0.9em;
+            font-size: 0.8em;
       }
 }
