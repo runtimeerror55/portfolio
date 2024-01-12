@@ -74,6 +74,7 @@
 .project-images {
       display: flex;
       overflow-x: scroll;
+      overflow-y: hidden;
       width: 100%;
       max-width: 810px;
       gap: 10px;
@@ -87,10 +88,7 @@
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
 }
-.project-image {
-      width: 400px;
-      cursor: pointer;
-}
+
 .project-image:hover {
       transform: scale(0.99);
 }

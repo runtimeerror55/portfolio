@@ -58,7 +58,20 @@ const projects = [
            ready to experience Tetris like never
            before, right in your web browser`,
             icon: "faGamepad",
-            images: [],
+            images: [
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971708/tetris-2.0/one_egzbtu.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971710/tetris-2.0/two_gf8jjc.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971713/tetris-2.0/three_l8jpe2.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971716/tetris-2.0/four_ultzjq.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971721/tetris-2.0/five_mwfwta.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971724/tetris-2.0/six_ehz62q.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971727/tetris-2.0/seven_ns2rpr.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971730/tetris-2.0/eight_d6myev.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971737/tetris-2.0/nine_qxpqjt.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971739/tetris-2.0/ten_fr452x.png",
+            ],
+            liveLink: "www.google.com",
+            gitHubLink: "www.google.com",
       },
       {
             title: "Tetris (1.0)",
@@ -99,6 +112,8 @@ const projects = [
             before, right in your web browser`,
             icon: "faGamepad",
             images: [],
+            liveLink: "www.google.com",
+            gitHubLink: "www.google.com",
       },
       {
             title: "Touch typing (2.0)",
@@ -147,6 +162,8 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877521/touch-typing-2.0/six_ecpjjy.png",
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877523/touch-typing-2.0/seven_wxhjyl.png",
             ],
+            liveLink: "www.google.com",
+            gitHubLink: "www.google.com",
       },
       {
             title: "Touch typing (1.0)",
@@ -156,7 +173,17 @@ const projects = [
             timeSpentLink:
                   "https://wakatime.com/badge/user/4508671f-c39e-4efe-b93e-586266f777da/project/b44acfdd-6382-4cfb-a219-5510400f2056.svg",
             icon: "faKeyboard",
-            images: [],
+            images: [
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964478/touch-typing-1.0/one_pk4aig.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964484/touch-typing-1.0/two_sadxvd.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964489/touch-typing-1.0/three_gvhvy5.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964494/touch-typing-1.0/four_stdc3o.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964499/touch-typing-1.0/five_jvblxd.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964503/touch-typing-1.0/six_wz82nj.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964506/touch-typing-1.0/seven_rhigv8.png",
+            ],
+            liveLink: "https://pegasis-typing.firebaseapp.com",
+            gitHubLink: "www.google.com",
       },
       {
             title: "Ecommerce",
@@ -204,6 +231,8 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826232/ecommerce/six_qkljad.png",
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826239/ecommerce/seven_xndyzq.png",
             ],
+            liveLink: "https://ecommerce-fawn-pi-63.vercel.app",
+            gitHubLink: "www.google.com",
       },
       {
             title: "Video library",
@@ -250,6 +279,8 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827381/video-library/seven_fthsa5.png",
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827387/video-library/eight_hs4q9q.png",
             ],
+            liveLink: "https://techtotube.vercel.app",
+            gitHubLink: "www.google.com",
       },
 ];
 const blogs = [

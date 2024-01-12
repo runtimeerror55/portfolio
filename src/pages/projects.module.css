@@ -2,6 +2,7 @@
       width: 90%;
       margin-top: 80px;
 }
+
 .projects-heading {
       color: white;
       font-size: 30px;
@@ -105,6 +106,15 @@
 .tool {
       width: 50%;
 }
+
+/* @keyframes opacity-animation {
+      from {
+            opacity: 0;
+      }
+      to {
+            opacity: 1;
+      }
+} */
 
 @media (max-width: 1000px) {
       .project {

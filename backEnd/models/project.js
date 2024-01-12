@@ -21,6 +21,8 @@ const projectSchema = mongoose.Schema({
       introduction: String,
       icon: String,
       images: [String],
+      liveLink: String,
+      gitHubLink: String,
 });
 
 module.exports.ProjectModel = mongoose.model("projects", projectSchema);

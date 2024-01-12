@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { ImageOverlay } from "./imageOverlay";
-
+import { ProjectImage } from "./projectImage";
 export const ProjectDetails = () => {
       const loaderData = useAsyncValue();
       const { theme } = useContext(themeContext);
@@ -32,7 +32,7 @@ export const ProjectDetails = () => {
                                           " " +
                                           styles["live-button-" + theme]
                                     }
-                                    href="google.com"
+                                    href={loaderData.payload.liveLink}
                               >
                                     <FontAwesomeIcon
                                           icon={faGithub}
@@ -46,7 +46,7 @@ export const ProjectDetails = () => {
                                           " " +
                                           styles["github-button-" + theme]
                                     }
-                                    href="google.com"
+                                    href={loaderData.payload.gitHubLink}
                               >
                                     <FontAwesomeIcon
                                           icon={faGithub}
@@ -123,34 +123,15 @@ export const ProjectDetails = () => {
                                           {loaderData.payload.images.map(
                                                 (imageLink, index) => {
                                                       return (
-                                                            <img
-                                                                  src={
+                                                            <ProjectImage
+                                                                  setShowImageOverlay={
+                                                                        setShowImageOverlay
+                                                                  }
+                                                                  index={index}
+                                                                  imageLink={
                                                                         imageLink
                                                                   }
-                                                                  alt="project"
-                                                                  className={
-                                                                        styles[
-                                                                              "project-image"
-                                                                        ]
-                                                                  }
-                                                                  onClick={(
-                                                                        event
-                                                                  ) => {
-                                                                        console.log(
-                                                                              event
-                                                                                    .target
-                                                                                    .src
-                                                                        );
-                                                                        setShowImageOverlay(
-                                                                              event.target.getAttribute(
-                                                                                    "data-index"
-                                                                              )
-                                                                        );
-                                                                  }}
-                                                                  data-index={
-                                                                        index
-                                                                  }
-                                                            ></img>
+                                                            ></ProjectImage>
                                                       );
                                                 }
                                           )}
