@@ -56,7 +56,7 @@
 .content {
       color: rgba(255, 255, 255, 0.8);
       border-bottom: 2px solid rgba(255, 255, 255, 0.5);
-      padding: 20px;
+      padding: 15px;
       margin-bottom: 10px;
 }
 
@@ -106,6 +106,23 @@
 }
 .image-control:hover {
       transform: scale(0.9);
+}
+
+.h3-heading {
+      /* border-top: 2px solid rgba(0, 0, 0, 0.5); */
+      margin-top: 5px;
+}
+
+/* .p1 {
+      margin: 10px;
+} */
+
+ul {
+      padding-left: 15px;
+}
+p,
+li {
+      margin: 5px;
 }
 @media (max-width: 800px) {
       .project-name {
