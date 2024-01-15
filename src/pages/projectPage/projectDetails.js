@@ -79,11 +79,11 @@ export const ProjectDetails = () => {
                         </p>
 
                         {loaderData.payload._id ===
-                        "659fda3f48d125734147cb2c" ? (
+                        "65a50d18d37127fa1a6ba0cf" ? (
                               <TetrisTwo theme={theme}></TetrisTwo>
                         ) : null}
                         {loaderData.payload._id ===
-                        "659fda3f48d125734147cb2e" ? (
+                        "65a50d18d37127fa1a6ba0d1" ? (
                               <TouchTypingTwo theme={theme}></TouchTypingTwo>
                         ) : null}
 

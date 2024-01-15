@@ -167,11 +167,32 @@ const projects = [
       },
       {
             title: "Touch typing (1.0)",
-            keyFunctionalities: [],
-            toolAndLanguages: [],
+            keyFunctionalities: [
+                  "calculating wpm,accuracy of the test",
+                  "save all the stats of that particular test",
+                  "calculating all time stats ( avg wpm, avg accuracy, each letter avg accuracy) and showing them in stats page",
+                  "calculating stats for last 10 tests (avg wpm ,avg accuracy)and showing them in stats page",
+                  "showing timer during the test",
+                  "sounds while typing",
+                  "multiple themes, timers to choose from",
+                  "showing test stats in the form of graph after every test",
+                  "authentication",
+            ],
+            toolAndLanguages: [
+                  "html",
+                  "css",
+                  "javscript",
+                  "paperjs",
+                  "howlerjs",
+                  "plotlyjs",
+                  "animejs",
+                  "firebase",
+            ],
             versions: [],
             timeSpentLink:
                   "https://wakatime.com/badge/user/4508671f-c39e-4efe-b93e-586266f777da/project/b44acfdd-6382-4cfb-a219-5510400f2056.svg",
+            introduction:
+                  "A web based touch typing. Experience simple,elegant,fast, clean touch typing and improve your typing skills",
             icon: "faKeyboard",
             images: [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964478/touch-typing-1.0/one_pk4aig.png",
