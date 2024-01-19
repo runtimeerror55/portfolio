@@ -24,7 +24,7 @@ export const About = ({ theme }) => {
                                     className={styles["profile"]}
                               ></img>
                               <a
-                                    href=" https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md"
+                                    href="https://github.com/runtimeerror55"
                                     className={styles["social-link"]}
                               >
                                     <FontAwesomeIcon
