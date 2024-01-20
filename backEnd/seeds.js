@@ -70,8 +70,9 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971737/tetris-2.0/nine_qxpqjt.png",
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704971739/tetris-2.0/ten_fr452x.png",
             ],
-            liveLink: "www.google.com",
-            gitHubLink: "www.google.com",
+            liveLink: "https://tetris-2.vercel.app/",
+            gitHubLink:
+                  "https://github.com/runtimeerror55/tetris-react-version",
       },
       {
             title: "Tetris (1.0)",
@@ -111,9 +112,15 @@ const projects = [
             ready to experience Tetris like never
             before, right in your web browser`,
             icon: "faGamepad",
-            images: [],
-            liveLink: "www.google.com",
-            gitHubLink: "www.google.com",
+            images: [
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1705344538/tetris-1.0/one_uyrrfk.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1705344540/tetris-1.0/two_ygxhx1.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1705344541/tetris-1.0/three_bdfoxu.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1705344543/tetris-1.0/four_hhflqb.png",
+                  "https://res.cloudinary.com/diwrxz82u/image/upload/v1705344545/tetris-1.0/five_nauaek.png",
+            ],
+            liveLink: "https://www.google.com",
+            gitHubLink: "https://github.com/runtimeerror55/tetris",
       },
       {
             title: "Touch typing (2.0)",
@@ -162,8 +169,8 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877521/touch-typing-2.0/six_ecpjjy.png",
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704877523/touch-typing-2.0/seven_wxhjyl.png",
             ],
-            liveLink: "www.google.com",
-            gitHubLink: "www.google.com",
+            liveLink: "https://touch-typing-2-steel.vercel.app/",
+            gitHubLink: "https://github.com/runtimeerror55/typing-web-app",
       },
       {
             title: "Touch typing (1.0)",
@@ -204,7 +211,7 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704964506/touch-typing-1.0/seven_rhigv8.png",
             ],
             liveLink: "https://pegasis-typing.firebaseapp.com",
-            gitHubLink: "www.google.com",
+            gitHubLink: "https://www.google.com",
       },
       {
             title: "Ecommerce",
@@ -253,7 +260,7 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704826239/ecommerce/seven_xndyzq.png",
             ],
             liveLink: "https://ecommerce-fawn-pi-63.vercel.app",
-            gitHubLink: "www.google.com",
+            gitHubLink: "https://github.com/runtimeerror55/ecommerce",
       },
       {
             title: "Video library",
@@ -301,7 +308,7 @@ const projects = [
                   "https://res.cloudinary.com/diwrxz82u/image/upload/v1704827387/video-library/eight_hs4q9q.png",
             ],
             liveLink: "https://techtotube.vercel.app",
-            gitHubLink: "www.google.com",
+            gitHubLink: "https://github.com/runtimeerror55/techtotube",
       },
 ];
 const blogs = [

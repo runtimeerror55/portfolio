@@ -43,7 +43,7 @@ export const TetrisTwo = ({ theme }) => {
                                           possible.
                                     </li>
                                     <li>
-                                          <b>split screen (2 Players):</b>
+                                          <b>split screen (2 Players):</b>{" "}
                                           invite a friend to join the fun!
                                           Experience the thrill of competitive
                                           Tetris with two players on the same
@@ -69,17 +69,17 @@ export const TetrisTwo = ({ theme }) => {
 
                               <ul>
                                     <li>
-                                          Score Until You Die: Keep clearing
-                                          lines and stacking blocks until you
-                                          can't go on any longer. Challenge
-                                          yourself to reach new heights with
-                                          each game. Speed of the tetromino
-                                          increases at 3 minutes (1.5x) and 6
-                                          minutes (2x).
+                                          <b>Score Until You Die:</b> Keep
+                                          clearing lines and stacking blocks
+                                          until you can't go on any longer.
+                                          Challenge yourself to reach new
+                                          heights with each game. Speed of the
+                                          tetromino increases at 3 minutes
+                                          (1.5x) and 6 minutes (2x).
                                     </li>
                                     <li>
-                                          Maximize Score in 5 Min: Feel the
-                                          pressure as you aim to achieve the
+                                          <b>Maximize Score in 5 Min:</b> Feel
+                                          the pressure as you aim to achieve the
                                           highest score possible within a time
                                           limit of 5 minutes. Quick thinking and
                                           precision are key to mastering this
