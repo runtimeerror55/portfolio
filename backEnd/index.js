@@ -4,23 +4,22 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const { ProjectModel } = require("./models/project");
 const { BlogModel } = require("./models/blog");
-const localDbUrl =
-      "mongodb://127.0.0.1:27017/portfolio?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+1.9.0";
-const hostedDbUrl =
-      "mongodb+srv://aakashdeep954:a1S6mNXvLK0b158x@portfoliocluster.c1qp6ud.mongodb.net/portfolio?retryWrites=true&w=majority";
 
+if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+      require("dotenv").config({ path: __dirname + "\\.env" });
+      app.use(cors("*"));
+}
 mongoose
-      .connect(hostedDbUrl)
+      .connect(process.env.hosted_db_url)
       .then(() => {
             console.log("connected to mongodb");
       })
       .catch((e) => {
             console.log(e);
       });
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors("*"));
+
 app.listen(8080, () => {
       console.log("listening on 8080 port");
 });
