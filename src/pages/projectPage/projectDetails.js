@@ -9,6 +9,7 @@ import { ImageOverlay } from "./imageOverlay";
 import { ProjectImage } from "./projectImage";
 import { TetrisTwo } from "./tetris-2-information";
 import { TouchTypingTwo } from "./touch-typing-2-information";
+
 export const ProjectDetails = () => {
       const loaderData = useAsyncValue();
       const { theme } = useContext(themeContext);
@@ -57,46 +58,8 @@ export const ProjectDetails = () => {
                                     github
                               </a>
                         </div>
-                        <h3
-                              className={
-                                    styles["heading"] +
-                                    " " +
-                                    styles["heading-" + theme]
-                              }
-                        >
-                              Introduction
-                        </h3>
-                        <p
-                              className={
-                                    styles["introduction"] +
-                                    " " +
-                                    styles["content"] +
-                                    " " +
-                                    styles["content-" + theme]
-                              }
-                        >
-                              {loaderData.payload.introduction}
-                        </p>
-
-                        {loaderData.payload._id ===
-                        "65abb45e0cb4d3e0de2db51c" ? (
-                              <TetrisTwo theme={theme}></TetrisTwo>
-                        ) : null}
-                        {loaderData.payload._id ===
-                        "65abb45e0cb4d3e0de2db51e" ? (
-                              <TouchTypingTwo theme={theme}></TouchTypingTwo>
-                        ) : null}
 
                         <div>
-                              <h3
-                                    className={
-                                          styles["heading"] +
-                                          " " +
-                                          styles["heading-" + theme]
-                                    }
-                              >
-                                    Media
-                              </h3>
                               <div
                                     className={
                                           styles["content"] +
@@ -110,6 +73,19 @@ export const ProjectDetails = () => {
                                           className={styles["project-images"]}
                                           ref={imagesRef}
                                     >
+                                          {loaderData.payload.title ===
+                                          "Tetris (2.0)" ? (
+                                                <video
+                                                      src="https://res.cloudinary.com/diwrxz82u/video/upload/v1706544493/tetris-2.0/tetris-1_xnvq8m.mp4"
+                                                      style={{
+                                                            width: "400px",
+                                                            borderRadius:
+                                                                  "15px",
+                                                            border: "2px solid white",
+                                                      }}
+                                                      controls
+                                                ></video>
+                                          ) : null}
                                           {loaderData.payload.images.map(
                                                 (imageLink, index) => {
                                                       return (
@@ -164,6 +140,34 @@ export const ProjectDetails = () => {
                                     </div>
                               </div>
                         </div>
+                        <h3
+                              className={
+                                    styles["heading"] +
+                                    " " +
+                                    styles["heading-" + theme]
+                              }
+                        >
+                              Introduction
+                        </h3>
+                        <p
+                              className={
+                                    styles["introduction"] +
+                                    " " +
+                                    styles["content"] +
+                                    " " +
+                                    styles["content-" + theme]
+                              }
+                        >
+                              {loaderData.payload.introduction}
+                        </p>
+
+                        {loaderData.payload.title === "Tetris (2.0)" ? (
+                              <TetrisTwo theme={theme}></TetrisTwo>
+                        ) : null}
+                        {loaderData.payload.title === "Touch typing (2.0)" ? (
+                              <TouchTypingTwo theme={theme}></TouchTypingTwo>
+                        ) : null}
+
                         <h3
                               className={
                                     styles["heading"] +

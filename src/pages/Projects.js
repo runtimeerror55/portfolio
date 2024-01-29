@@ -67,7 +67,7 @@ export const Projects = () => {
                                                 {project.title}
                                           </div>
                                           <div className={styles["tech-stack"]}>
-                                                <div className={styles["tool"]}>
+                                                {/* <div className={styles["tool"]}>
                                                       Html,
                                                 </div>
                                                 <div className={styles["tool"]}>
@@ -84,7 +84,17 @@ export const Projects = () => {
                                                 </div>
                                                 <div className={styles["tool"]}>
                                                       React
-                                                </div>
+                                                </div> */}
+                                                {project.introduction
+                                                      .split(" ")
+                                                      .filter((word, index) => {
+                                                            if (index < 15) {
+                                                                  return word;
+                                                            }
+                                                            return false;
+                                                      })
+                                                      .join(" ")}
+                                                ...
                                           </div>
                                           <TimeSpent
                                                 project={project}

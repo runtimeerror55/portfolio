@@ -1,6 +1,7 @@
 .projects-section {
-      width: 90%;
+      width: 95%;
       margin-top: 80px;
+      max-width: 1200px;
 }
 
 .projects-heading {
@@ -34,10 +35,9 @@
 }
 
 .project-icon-container {
-      padding: 10px;
       background-color: teal;
-      width: 120px;
       border-radius: 10px;
+      min-width: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,7 +46,12 @@
 }
 
 .project-information {
+      margin: 3px;
       margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 5px;
 }
 
 .project-name {
@@ -94,13 +99,10 @@
 
 .tech-stack {
       padding: 5px;
-      width: 50%;
-      border-bottom-right-radius: 20px;
-      border-top-right-radius: 20px;
       display: flex;
       flex-wrap: wrap;
       color: grey;
-      font-size: 1em;
+      font-size: 0.9em;
 }
 
 .tool {
