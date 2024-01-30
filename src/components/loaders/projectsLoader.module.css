@@ -7,7 +7,7 @@
       border-radius: 20px;
       margin-top: 20px;
       display: flex;
-      height: 141px;
+      height: 140px;
       padding: 10px;
       width: 49%;
       margin-left: 1%;
@@ -17,11 +17,4 @@
 .project-light-mode {
       background-color: #deecf7;
       color: black;
-}
-
-@media (max-width: 1000px) {
-      .project {
-            width: 99%;
-            height: 128px;
-      }
 }

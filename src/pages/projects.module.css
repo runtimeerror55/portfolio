@@ -37,14 +37,20 @@
 .project-icon-container {
       background-color: teal;
       border-radius: 10px;
-      min-width: 120px;
+      width: 250px;
       display: flex;
       align-items: center;
       justify-content: center;
       color: white;
       font-size: 1.5em;
+      height: 100%;
+      aspect-ratio: 16/9;
 }
 
+.image-container {
+      min-width: 250px;
+      max-width: 250px;
+}
 .project-information {
       margin: 3px;
       margin-left: 10px;
@@ -130,5 +136,31 @@
       }
       .tech-stack {
             font-size: 0.8em;
+      }
+}
+
+@media (max-width: 1250px) {
+      .projects {
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+      .project {
+            width: unset;
+            flex-direction: column;
+      }
+      .project-icon-container {
+            width: 100%;
+      }
+
+      .project-information {
+            margin-top: 20px;
+            margin-left: 3px;
+      }
+      .image-container {
+            aspect-ratio: 16/9;
+            min-width: unset;
+            max-width: unset;
       }
 }

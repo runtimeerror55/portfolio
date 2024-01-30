@@ -23,6 +23,7 @@ const projectSchema = mongoose.Schema({
       images: [String],
       liveLink: String,
       gitHubLink: String,
+      tags: [String],
 });
 
 module.exports.ProjectModel = mongoose.model("projects", projectSchema);

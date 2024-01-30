@@ -55,6 +55,14 @@ export const HomePage = () => {
                                                 theme={theme}
                                                 color="teal"
                                                 numberOfLoaders={6}
+                                                projectsAttributes={{
+                                                      className:
+                                                            styles["projects"],
+                                                }}
+                                                projectAttributes={{
+                                                      className:
+                                                            styles["project"],
+                                                }}
                                           ></ProjectsLoader>
                                     }
                               >
@@ -80,6 +88,9 @@ export const HomePage = () => {
                                                 theme={theme}
                                                 color="crimson"
                                                 numberOfLoaders={4}
+                                                projectAttributes={{
+                                                      className: styles["blog"],
+                                                }}
                                           ></ProjectsLoader>
                                     }
                               >

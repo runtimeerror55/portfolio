@@ -116,3 +116,38 @@
             font-size: 30px;
       }
 }
+
+.project {
+      height: 160px !important;
+}
+
+@media (max-width: 1250px) {
+      .projects {
+            grid-column-gap: 20px;
+            grid-row-gap: 10px;
+            display: grid !important;
+            grid-template-columns: repeat(
+                  auto-fill,
+                  minmax(300px, 1fr)
+            ) !important;
+      }
+      .project {
+            width: unset !important ;
+            flex-direction: column;
+            height: 354px !important;
+      }
+}
+
+@media (max-width: 800px) {
+      .projects-section,
+      .blogs-section {
+            width: 95%;
+      }
+}
+
+@media (max-width: 1000px) {
+      .blog {
+            width: 99% !important;
+            height: 128px !important;
+      }
+}

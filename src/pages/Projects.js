@@ -10,9 +10,12 @@ import {
       faUser,
       faArrowRight,
       faGreaterThan,
+      faUpRightFromSquare,
+      faLink,
 } from "@fortawesome/free-solid-svg-icons";
 import { useContext } from "react";
 import { TimeSpent } from "./timeSpent";
+import { ImageLoader } from "../components/loaders/imageLoader";
 
 const icons = {
       faGamepad,
@@ -39,15 +42,30 @@ export const Projects = () => {
                                           styles["project-" + theme]
                                     }
                               >
-                                    <div
+                                    {/* <img
+                                          src={project.images[0]}
                                           className={
                                                 styles["project-icon-container"]
                                           }
-                                    >
-                                          <FontAwesomeIcon
-                                                icon={icons[project.icon]}
-                                          />
-                                    </div>
+                                          alt="project"
+                                    ></img> */}
+                                    <ImageLoader
+                                          imageAttibutes={{
+                                                src: project.images[0],
+                                                alt: "project",
+                                                className:
+                                                      styles[
+                                                            "project-icon-container"
+                                                      ],
+                                          }}
+                                          containerAttributes={{
+                                                className:
+                                                      styles["image-container"],
+                                          }}
+                                          loaderAttributes={{
+                                                backgroundColor: "teal",
+                                          }}
+                                    ></ImageLoader>
 
                                     <div
                                           className={
@@ -109,9 +127,7 @@ export const Projects = () => {
                                           }
                                           aria-label="project link"
                                     >
-                                          <FontAwesomeIcon
-                                                icon={faGreaterThan}
-                                          />
+                                          <FontAwesomeIcon icon={faLink} />
                                     </Link>
                               </div>
                         );
