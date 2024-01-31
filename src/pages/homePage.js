@@ -25,7 +25,7 @@ export const HomePage = () => {
                   >
                         <div>
                               <img
-                                    src={profile}
+                                    src="https://res.cloudinary.com/diwrxz82u/image/upload/q_auto,f_auto/v1706687634/portfolio/profile_peqnmn.jpg"
                                     className={styles["profile"]}
                                     alt="user"
                               ></img>

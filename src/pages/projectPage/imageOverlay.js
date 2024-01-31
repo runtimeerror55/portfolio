@@ -28,10 +28,10 @@ export const ImageOverlay = ({ index, setShowImageOverlay, loaderData }) => {
                                     icon={faArrowLeft}
                                     onClick={() => {
                                           if (currentIndex === 0) {
-                                                setCurrentIndex(
-                                                      loaderData.payload.images
-                                                            .length - 1
-                                                );
+                                                // setCurrentIndex(
+                                                //       loaderData.payload.images
+                                                //             .length - 1
+                                                // );
                                           } else {
                                                 setCurrentIndex((previous) => {
                                                       return previous - 1;
@@ -49,7 +49,7 @@ export const ImageOverlay = ({ index, setShowImageOverlay, loaderData }) => {
                                                       .length -
                                                       1
                                           ) {
-                                                setCurrentIndex(0);
+                                                // setCurrentIndex(0);
                                           } else {
                                                 setCurrentIndex((previous) => {
                                                       return previous + 1;

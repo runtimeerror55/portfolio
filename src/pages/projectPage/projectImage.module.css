@@ -1,7 +1,7 @@
 .image-container {
       position: relative;
-      width: 400px;
-      height: 225px;
+      min-width: 400px;
+      max-width: 400px;
 }
 
 .image-container:hover {
@@ -9,8 +9,17 @@
 }
 
 .project-image {
-      width: 400px;
+      width: 100%;
       cursor: pointer;
       border-radius: 10px;
       border: 2px solid;
+      display: block;
+      height: 100%;
+}
+
+@media (max-width: 460px) {
+      .image-container {
+            min-width: 320px;
+            max-width: 320px;
+      }
 }

@@ -1,145 +1,151 @@
 import { useAsyncValue } from "react-router";
-import { useContext, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import styles from "./projectDetails.module.css";
 import { themeContext } from "../../context/theme";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+      faArrowLeft,
+      faArrowRight,
+      faCircleLeft,
+      faCircleRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { ImageOverlay } from "./imageOverlay";
 import { ProjectImage } from "./projectImage";
 import { TetrisTwo } from "./tetris-2-information";
 import { TouchTypingTwo } from "./touch-typing-2-information";
+import stylesOne from "./projectImage.module.css";
 
 export const ProjectDetails = () => {
       const loaderData = useAsyncValue();
       const { theme } = useContext(themeContext);
       const imagesRef = useRef();
+      const imageRef = useRef();
       const [showImageOverlay, setShowImageOverlay] = useState(null);
+      useEffect(() => {
+            console.log(imageRef.current.offsetWidth);
+      }, []);
 
       return (
             <>
-                  <section className={styles["project-section"]}>
-                        <h2
+                  <h2
+                        className={
+                              styles["project-name"] +
+                              " " +
+                              styles["project-name-" + theme]
+                        }
+                  >
+                        {loaderData.payload.title}
+                  </h2>
+                  <div className={styles["project-links"]}>
+                        <a
                               className={
-                                    styles["project-name"] +
+                                    styles["live-button"] +
                                     " " +
-                                    styles["project-name-" + theme]
+                                    styles["live-button-" + theme]
+                              }
+                              href={loaderData.payload.liveLink}
+                        >
+                              <FontAwesomeIcon
+                                    icon={faGithub}
+                                    size="lg"
+                              ></FontAwesomeIcon>
+                              Live
+                        </a>
+                        <a
+                              className={
+                                    styles["github-button"] +
+                                    " " +
+                                    styles["github-button-" + theme]
+                              }
+                              href={loaderData.payload.gitHubLink}
+                        >
+                              <FontAwesomeIcon
+                                    icon={faGithub}
+                                    size="lg"
+                              ></FontAwesomeIcon>
+                              github
+                        </a>
+                  </div>
+                  <div className={styles["media"]}>
+                        <div
+                              className={styles["project-images"]}
+                              ref={imagesRef}
+                        >
+                              {loaderData.payload.title === "Tetris (2.0)" ? (
+                                    <div
+                                          className={
+                                                stylesOne["image-container"]
+                                          }
+                                    >
+                                          <video
+                                                src="https://res.cloudinary.com/diwrxz82u/video/upload/v1706544493/tetris-2.0/tetris-1_xnvq8m.mp4"
+                                                controls
+                                                className={
+                                                      stylesOne["project-image"]
+                                                }
+                                          ></video>
+                                    </div>
+                              ) : null}
+                              {loaderData.payload.images.map(
+                                    (imageLink, index) => {
+                                          return (
+                                                <ProjectImage
+                                                      setShowImageOverlay={
+                                                            setShowImageOverlay
+                                                      }
+                                                      index={index}
+                                                      imageLink={imageLink.replace(
+                                                            "upload",
+                                                            "upload/q_auto,f_auto"
+                                                      )}
+                                                      ref={imageRef}
+                                                ></ProjectImage>
+                                          );
+                                    }
+                              )}
+                        </div>
+                        <div
+                              className={
+                                    styles["images-controls"] +
+                                    " " +
+                                    styles["image-controls-" + theme]
                               }
                         >
-                              {loaderData.payload.title}
-                        </h2>
-                        <div className={styles["project-links"]}>
-                              <a
-                                    className={
-                                          styles["live-button"] +
-                                          " " +
-                                          styles["live-button-" + theme]
-                                    }
-                                    href={loaderData.payload.liveLink}
-                              >
-                                    <FontAwesomeIcon
-                                          icon={faGithub}
-                                          size="lg"
-                                    ></FontAwesomeIcon>
-                                    Live
-                              </a>
-                              <a
-                                    className={
-                                          styles["github-button"] +
-                                          " " +
-                                          styles["github-button-" + theme]
-                                    }
-                                    href={loaderData.payload.gitHubLink}
-                              >
-                                    <FontAwesomeIcon
-                                          icon={faGithub}
-                                          size="lg"
-                                    ></FontAwesomeIcon>
-                                    github
-                              </a>
+                              <FontAwesomeIcon
+                                    icon={faCircleLeft}
+                                    onClick={(event) => {
+                                          event.stopPropagation();
+                                          event.preventDefault();
+                                          imagesRef.current.scrollBy({
+                                                top: 0,
+                                                left:
+                                                      -imageRef.current
+                                                            .offsetWidth - 10,
+                                                behavior: "smooth",
+                                          });
+                                    }}
+                                    className={styles["image-control"]}
+                              ></FontAwesomeIcon>
+                              <FontAwesomeIcon
+                                    onClick={(event) => {
+                                          event.stopPropagation();
+                                          event.preventDefault();
+                                          imagesRef.current.scrollBy({
+                                                top: 0,
+                                                left:
+                                                      imageRef.current
+                                                            .offsetWidth + 10,
+                                                behavior: "smooth",
+                                          });
+                                    }}
+                                    icon={faCircleRight}
+                                    className={styles["image-control"]}
+                              ></FontAwesomeIcon>
                         </div>
+                  </div>
 
-                        <div>
-                              <div
-                                    className={
-                                          styles["content"] +
-                                          " " +
-                                          styles["content-" + theme] +
-                                          " " +
-                                          styles["projects-container"]
-                                    }
-                              >
-                                    <div
-                                          className={styles["project-images"]}
-                                          ref={imagesRef}
-                                    >
-                                          {loaderData.payload.title ===
-                                          "Tetris (2.0)" ? (
-                                                <video
-                                                      src="https://res.cloudinary.com/diwrxz82u/video/upload/v1706544493/tetris-2.0/tetris-1_xnvq8m.mp4"
-                                                      style={{
-                                                            width: "400px",
-                                                            borderRadius:
-                                                                  "15px",
-                                                            border: "2px solid white",
-                                                      }}
-                                                      controls
-                                                ></video>
-                                          ) : null}
-                                          {loaderData.payload.images.map(
-                                                (imageLink, index) => {
-                                                      return (
-                                                            <ProjectImage
-                                                                  setShowImageOverlay={
-                                                                        setShowImageOverlay
-                                                                  }
-                                                                  index={index}
-                                                                  imageLink={
-                                                                        imageLink
-                                                                  }
-                                                            ></ProjectImage>
-                                                      );
-                                                }
-                                          )}
-                                    </div>
-                                    <div className={styles["images-controls"]}>
-                                          <FontAwesomeIcon
-                                                icon={faArrowLeft}
-                                                onClick={(event) => {
-                                                      event.stopPropagation();
-                                                      event.preventDefault();
-                                                      imagesRef.current.scrollBy(
-                                                            {
-                                                                  top: 0,
-                                                                  left: -410,
-                                                                  behavior: "smooth",
-                                                            }
-                                                      );
-                                                }}
-                                                className={
-                                                      styles["image-control"]
-                                                }
-                                          ></FontAwesomeIcon>
-                                          <FontAwesomeIcon
-                                                onClick={(event) => {
-                                                      event.stopPropagation();
-                                                      event.preventDefault();
-                                                      imagesRef.current.scrollBy(
-                                                            {
-                                                                  top: 0,
-                                                                  left: 410,
-                                                                  behavior: "smooth",
-                                                            }
-                                                      );
-                                                }}
-                                                icon={faArrowRight}
-                                                className={
-                                                      styles["image-control"]
-                                                }
-                                          ></FontAwesomeIcon>
-                                    </div>
-                              </div>
-                        </div>
+                  <section className={styles["project-section"]}>
                         <h3
                               className={
                                     styles["heading"] +

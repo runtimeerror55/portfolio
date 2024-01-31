@@ -51,7 +51,10 @@ export const Projects = () => {
                                     ></img> */}
                                     <ImageLoader
                                           imageAttibutes={{
-                                                src: project.images[0],
+                                                src: project.images[0].replace(
+                                                      "upload",
+                                                      "upload/q_auto,f_auto"
+                                                ),
                                                 alt: "project",
                                                 className:
                                                       styles[
