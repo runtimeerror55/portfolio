@@ -12,9 +12,13 @@
       width: 100%;
       cursor: pointer;
       border-radius: 10px;
-      border: 2px solid;
+      border: 2px solid white;
       display: block;
       height: 100%;
+}
+
+.project-image-light-mode {
+      border: 2px solid black;
 }
 
 @media (max-width: 460px) {

@@ -1,10 +1,12 @@
-import { useState, forwardRef } from "react";
+import { useState, forwardRef, useContext } from "react";
 import styles from "./projectImage.module.css";
 import { Facebook } from "react-content-loader";
+import { themeContext } from "../../context/theme";
 
 export const ProjectImage = forwardRef(
       ({ index, imageLink, setShowImageOverlay }, ref) => {
             const [showLoader, setShowLoader] = useState(true);
+            const { theme } = useContext(themeContext);
             return (
                   <div className={styles["image-container"]}>
                         {showLoader ? (
@@ -23,7 +25,11 @@ export const ProjectImage = forwardRef(
                         <img
                               src={imageLink}
                               alt="project"
-                              className={styles["project-image"]}
+                              className={
+                                    styles["project-image"] +
+                                    " " +
+                                    styles["project-image-" + theme]
+                              }
                               onClick={(event) => {
                                     console.log(event.target.src);
                                     setShowImageOverlay(
