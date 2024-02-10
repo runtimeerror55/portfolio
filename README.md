@@ -1,19 +1,3 @@
-# to do
-
-portfolio information to be displayed
-
-1. projects
-2. blogs
-3. about
-4. social media
-5. max-width should be setted to 1550px
-6. seeding updated content to hosted db
-7. delete other profile images
-8. how does map check if an element in an array is empty and it does not map to the return value if it is empty
-9. min hieght should be changed to 140 on project class
-10. max width of section should be around 1500px
-11. in mobile width the image length is 400px but showing about 90%
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
