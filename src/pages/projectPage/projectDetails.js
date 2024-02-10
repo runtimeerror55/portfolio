@@ -23,127 +23,180 @@ export const ProjectDetails = () => {
       const imageRef = useRef();
       const [showImageOverlay, setShowImageOverlay] = useState(null);
       useEffect(() => {
-            console.log(imageRef.current.offsetWidth);
+            console.log(loaderData.payload.title);
       }, []);
 
       return (
             <>
-                  <h2
-                        className={
-                              styles["project-name"] +
-                              " " +
-                              styles["project-name-" + theme]
-                        }
-                  >
-                        {loaderData.payload.title}
-                  </h2>
-                  <div className={styles["project-links"]}>
-                        <a
-                              className={
-                                    styles["live-button"] +
-                                    " " +
-                                    styles["live-button-" + theme]
-                              }
-                              href={loaderData.payload.liveLink}
-                        >
-                              <FontAwesomeIcon
-                                    icon={faGithub}
-                                    size="lg"
-                              ></FontAwesomeIcon>
-                              Live
-                        </a>
-                        <a
-                              className={
-                                    styles["github-button"] +
-                                    " " +
-                                    styles["github-button-" + theme]
-                              }
-                              href={loaderData.payload.gitHubLink}
-                        >
-                              <FontAwesomeIcon
-                                    icon={faGithub}
-                                    size="lg"
-                              ></FontAwesomeIcon>
-                              github
-                        </a>
-                  </div>
-                  <div className={styles["media"]}>
-                        <div
-                              className={styles["project-images"]}
-                              ref={imagesRef}
-                        >
-                              {loaderData.payload.title === "Tetris (2.0)" ? (
-                                    <div
-                                          className={
-                                                stylesOne["image-container"]
-                                          }
-                                    >
-                                          <video
-                                                src="https://res.cloudinary.com/diwrxz82u/video/upload/v1706544493/tetris-2.0/tetris-1_xnvq8m.mp4"
-                                                controls
-                                                className={
-                                                      stylesOne["project-image"]
-                                                }
-                                          ></video>
-                                    </div>
-                              ) : null}
-                              {loaderData.payload.images.map(
-                                    (imageLink, index) => {
-                                          return (
-                                                <ProjectImage
-                                                      setShowImageOverlay={
-                                                            setShowImageOverlay
-                                                      }
-                                                      index={index}
-                                                      imageLink={imageLink.replace(
-                                                            "upload",
-                                                            "upload/q_auto,f_auto"
-                                                      )}
-                                                      ref={imageRef}
-                                                ></ProjectImage>
-                                          );
+                  <section>
+                        <div>
+                              <h2
+                                    className={
+                                          styles["project-name"] +
+                                          " " +
+                                          styles["project-name-" + theme]
                                     }
-                              )}
+                              >
+                                    {loaderData.payload.title}
+                              </h2>
+                              <div className={styles["project-links"]}>
+                                    <a
+                                          className={
+                                                styles["live-button"] +
+                                                " " +
+                                                styles["live-button-" + theme]
+                                          }
+                                          href={loaderData.payload.liveLink}
+                                    >
+                                          <FontAwesomeIcon
+                                                icon={faGithub}
+                                                size="lg"
+                                          ></FontAwesomeIcon>
+                                          Live
+                                    </a>
+                                    <a
+                                          className={
+                                                styles["github-button"] +
+                                                " " +
+                                                styles["github-button-" + theme]
+                                          }
+                                          href={loaderData.payload.gitHubLink}
+                                    >
+                                          <FontAwesomeIcon
+                                                icon={faGithub}
+                                                size="lg"
+                                          ></FontAwesomeIcon>
+                                          github
+                                    </a>
+                              </div>
                         </div>
-                        <div
-                              className={
-                                    styles["images-controls"] +
-                                    " " +
-                                    styles["image-controls-" + theme]
-                              }
-                        >
-                              <FontAwesomeIcon
-                                    icon={faCircleLeft}
-                                    onClick={(event) => {
-                                          event.stopPropagation();
-                                          event.preventDefault();
-                                          imagesRef.current.scrollBy({
-                                                top: 0,
-                                                left:
-                                                      -imageRef.current
-                                                            .offsetWidth - 10,
-                                                behavior: "smooth",
-                                          });
-                                    }}
-                                    className={styles["image-control"]}
-                              ></FontAwesomeIcon>
-                              <FontAwesomeIcon
-                                    onClick={(event) => {
-                                          event.stopPropagation();
-                                          event.preventDefault();
-                                          imagesRef.current.scrollBy({
-                                                top: 0,
-                                                left:
-                                                      imageRef.current
-                                                            .offsetWidth + 10,
-                                                behavior: "smooth",
-                                          });
-                                    }}
-                                    icon={faCircleRight}
-                                    className={styles["image-control"]}
-                              ></FontAwesomeIcon>
+                        <div className={styles["media"]}>
+                              <div
+                                    className={styles["project-images"]}
+                                    ref={imagesRef}
+                              >
+                                    {loaderData.payload.videos.map((video) => {
+                                          return (
+                                                <div
+                                                      className={
+                                                            stylesOne[
+                                                                  "image-container"
+                                                            ]
+                                                      }
+                                                >
+                                                      <video
+                                                            src={video}
+                                                            controls
+                                                            className={
+                                                                  stylesOne[
+                                                                        "project-image"
+                                                                  ]
+                                                            }
+                                                      ></video>
+                                                </div>
+                                          );
+                                    })}
+
+                                    {/* {loaderData.payload.title ===
+                                    "Video library" ? (
+                                          <div
+                                                className={
+                                                      stylesOne[
+                                                            "image-container"
+                                                      ]
+                                                }
+                                          >
+                                                <video
+                                                      src="https://res.cloudinary.com/diwrxz82u/video/upload/v1706901408/video-library/video-library_seg1uj.mp4"
+                                                      controls
+                                                      className={
+                                                            stylesOne[
+                                                                  "project-image"
+                                                            ]
+                                                      }
+                                                ></video>
+                                          </div>
+                                    ) : null}
+                                    {loaderData.payload.title ===
+                                    "Ecommerce" ? (
+                                          <div
+                                                className={
+                                                      stylesOne[
+                                                            "image-container"
+                                                      ]
+                                                }
+                                          >
+                                                <video
+                                                      src="https://res.cloudinary.com/diwrxz82u/video/upload/v1707497947/ecommerce/ecommerce_fzyw5i.mp4"
+                                                      controls
+                                                      className={
+                                                            stylesOne[
+                                                                  "project-image"
+                                                            ]
+                                                      }
+                                                ></video>
+                                          </div>
+                                    ) : null} */}
+                                    {loaderData.payload.images.map(
+                                          (imageLink, index) => {
+                                                return (
+                                                      <ProjectImage
+                                                            setShowImageOverlay={
+                                                                  setShowImageOverlay
+                                                            }
+                                                            index={index}
+                                                            imageLink={imageLink.replace(
+                                                                  "upload",
+                                                                  "upload/q_auto,f_auto"
+                                                            )}
+                                                            ref={imageRef}
+                                                      ></ProjectImage>
+                                                );
+                                          }
+                                    )}
+                              </div>
+                              <div
+                                    className={
+                                          styles["images-controls"] +
+                                          " " +
+                                          styles["image-controls-" + theme]
+                                    }
+                              >
+                                    <FontAwesomeIcon
+                                          icon={faCircleLeft}
+                                          onClick={(event) => {
+                                                event.stopPropagation();
+                                                event.preventDefault();
+                                                imagesRef.current.scrollBy({
+                                                      top: 0,
+                                                      left:
+                                                            -imageRef.current
+                                                                  .offsetWidth -
+                                                            10,
+                                                      behavior: "smooth",
+                                                });
+                                          }}
+                                          className={styles["image-control"]}
+                                    ></FontAwesomeIcon>
+                                    <FontAwesomeIcon
+                                          onClick={(event) => {
+                                                event.stopPropagation();
+                                                event.preventDefault();
+                                                imagesRef.current.scrollBy({
+                                                      top: 0,
+                                                      left:
+                                                            imageRef.current
+                                                                  .offsetWidth +
+                                                            10,
+                                                      behavior: "smooth",
+                                                });
+                                          }}
+                                          icon={faCircleRight}
+                                          className={styles["image-control"]}
+                                    ></FontAwesomeIcon>
+                              </div>
                         </div>
-                  </div>
+                  </section>
 
                   <section className={styles["project-section"]}>
                         <h3

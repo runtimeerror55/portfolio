@@ -21,6 +21,7 @@ const projectSchema = mongoose.Schema({
       introduction: String,
       icon: String,
       images: [String],
+      videos: ["string"],
       liveLink: String,
       gitHubLink: String,
       tags: [String],
