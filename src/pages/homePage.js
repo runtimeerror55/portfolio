@@ -7,7 +7,7 @@ import { Projects } from "./Projects";
 import { ColorRing } from "react-loader-spinner";
 import { colorRingOptions } from "../utilities/utilities";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLightbulb, faBolt } from "@fortawesome/free-solid-svg-icons";
+import { faLightbulb } from "@fortawesome/free-solid-svg-icons";
 import { themeContext } from "../context/theme";
 import { Blogs } from "./blogs";
 import { About } from "./about";

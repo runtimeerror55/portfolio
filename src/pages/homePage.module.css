@@ -72,6 +72,9 @@
 .about-section {
       margin-bottom: 50px;
       padding: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 }
 
 .projects-heading,
@@ -140,7 +143,8 @@
 
 @media (max-width: 800px) {
       .projects-section,
-      .blogs-section {
+      .blogs-section,
+      .about-section {
             width: 95%;
       }
 }
@@ -149,5 +153,11 @@
       .blog {
             width: 99% !important;
             height: 128px !important;
+      }
+}
+
+@media (max-width: 530px) {
+      .container-one {
+            flex-direction: column;
       }
 }

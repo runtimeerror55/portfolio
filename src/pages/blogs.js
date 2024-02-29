@@ -60,26 +60,20 @@ export const Blogs = () => {
                                                       ]
                                                 }
                                           >
-                                                objects are an unordered
-                                                collection of properties where
-                                                each property has a name and a
-                                                value. objects are one of the
-                                                most fundamental data types in
-                                                javascript. In fact, almost
-                                                everything in javascript can
-                                                behave as an object even though
-                                                they are not typical objects.
-                                                Arrays are a special kind of
-                                                object, functions can be thought
-                                                of as an object, and even the
-                                                primitive data types such as
-                                                strings, numbers, and boolean
-                                                have methods even though they
-                                                are not typical objects.
+                                                {blog.description
+                                                      .split(" ")
+                                                      .filter((word, index) => {
+                                                            if (index < 20) {
+                                                                  return word;
+                                                            }
+                                                            return false;
+                                                      })
+                                                      .join(" ")}
+                                                ...
                                           </p>
                                     </div>
                                     <Link
-                                          to={`/projects/${blog._id}`}
+                                          to={blog.link}
                                           className={
                                                 styles["blog-link"] +
                                                 " " +
