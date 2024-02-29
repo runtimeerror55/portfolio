@@ -3,7 +3,7 @@ import profile from "../assets/images/profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
-import resume from "../assets/resume.pdf";
+// import resume from "../assets/resume.pdf";
 export const About = ({ theme }) => {
       return (
             <>
