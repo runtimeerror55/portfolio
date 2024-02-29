@@ -3,8 +3,20 @@ import profile from "../assets/images/profile.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faAt, faEnvelope, faFile } from "@fortawesome/free-solid-svg-icons";
+import { toastOptions } from "../utilities/utilities";
+import { toast } from "react-toastify";
 // import resume from "../assets/resume.pdf";
 export const About = ({ theme }) => {
+      const handleCopyClick = async () => {
+            try {
+                  await navigator.clipboard.writeText(
+                        "runtimeerror55@gmail.com"
+                  );
+                  toast.success("copied to clipboard", toastOptions);
+            } catch (err) {
+                  toast.error("Copy to clipboard failed", toastOptions);
+            }
+      };
       return (
             <>
                   <div
@@ -24,7 +36,9 @@ export const About = ({ theme }) => {
                                     alt="baymax"
                                     className={styles["profile"]}
                               ></img>
-                              <p>hi, this is aakash</p>
+                              <p className={styles["greeting-message"]}>
+                                    Hi, this is aakash
+                              </p>
                         </div>
                         <div className={styles["item"]}>
                               {/* <h3
@@ -116,20 +130,20 @@ export const About = ({ theme }) => {
                                     ></FontAwesomeIcon>
                                     github
                               </a>
-                              <a
-                                    href=" https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md"
+                              <div
                                     className={
                                           styles["social-link"] +
                                           " " +
                                           styles["social-link-" + theme]
                                     }
+                                    onClick={handleCopyClick}
                               >
                                     <FontAwesomeIcon
                                           icon={faEnvelope}
                                           size="lg"
                                     ></FontAwesomeIcon>
                                     gmail
-                              </a>
+                              </div>
                               <a
                                     href="https://res.cloudinary.com/diwrxz82u/image/upload/v1709239877/portfolio/resume_ovuzot.pdf"
                                     className={

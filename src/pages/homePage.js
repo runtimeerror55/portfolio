@@ -12,6 +12,8 @@ import { themeContext } from "../context/theme";
 import { Blogs } from "./blogs";
 import { About } from "./about";
 import { ProjectsLoader } from "../components/loaders/projectsLoader";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 export const HomePage = () => {
       const { loaderData } = useLoaderData();
       const { theme, themeChangeHandler } = useContext(themeContext);
@@ -38,6 +40,7 @@ export const HomePage = () => {
                         />
                   </div>
                   <main className={styles["main"]}>
+                        <ToastContainer />
                         <section className={styles["projects-section"]}>
                               <h2
                                     className={
