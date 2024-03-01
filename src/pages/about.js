@@ -145,7 +145,7 @@ export const About = ({ theme }) => {
                                     gmail
                               </div>
                               <a
-                                    href="https://res.cloudinary.com/diwrxz82u/image/upload/v1709239877/portfolio/resume_ovuzot.pdf"
+                                    href="https://res.cloudinary.com/diwrxz82u/image/upload/v1709272901/portfolio/resume_ukvjzd.pdf"
                                     className={
                                           styles["social-link"] +
                                           " " +
